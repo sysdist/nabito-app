@@ -1,0 +1,30 @@
+h1 Socket relays setup
+
+.table-responsive
+  table.table
+    thead
+      tr
+        th El socket
+        th Name
+        th Pin num
+        th Pin
+        th Is on
+        th
+        th
+        th
+  
+    tbody
+      - @relays.each do |relay|
+        tr
+          td = relay.el_socket.code
+          td = relay.name
+          td = relay.pin_num
+          td = relay.pin_id
+          td = relay.is_on
+          td = link_to 'Show', relay
+          td = link_to 'Edit', edit_relay_path(relay)
+          td = link_to 'Destroy', relay, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Relay', new_relay_path

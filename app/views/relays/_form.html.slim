@@ -1,0 +1,24 @@
+= form_for @relay do |f|
+  - if @relay.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@relay.errors.count, "error")} prohibited this relay from being saved:"
+      ul
+        - @relay.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :el_socket_id
+    = f.text_field :el_socket_id
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :pin_num
+    = f.number_field :pin_num
+  .field
+    = f.label :pin_id
+    = f.text_field :pin_id
+  .field
+    = f.label :is_on
+    = f.check_box :is_on
+  .actions = f.submit

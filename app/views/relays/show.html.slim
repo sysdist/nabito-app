@@ -1,0 +1,21 @@
+p#notice = notice
+
+p
+  strong El socket:
+  = @relay.el_socket
+p
+  strong Name:
+  = @relay.name
+p
+  strong Pin num:
+  = @relay.pin_num
+p
+  strong Pin:
+  = @relay.pin_id
+p
+  strong Is on:
+  = @relay.is_on
+
+= link_to 'Edit', edit_relay_path(@relay)
+'  |
+= link_to 'Back', relays_path

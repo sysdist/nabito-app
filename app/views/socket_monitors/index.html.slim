@@ -1,0 +1,31 @@
+h1 Socket monitors setup
+
+table.table
+  thead
+    tr
+      th El socket
+      th Current sensor
+      th Voltage sensor
+      th Nominal voltage
+      th Active
+      th Frequency
+      th
+      th
+      th
+
+  tbody
+    - @socket_monitors.each do |socket_monitor|
+      tr
+        td = socket_monitor.el_socket.code
+        td = socket_monitor.current_sensor_id
+        td = socket_monitor.voltage_sensor_id
+        td = socket_monitor.nominal_voltage
+        td = socket_monitor.active
+        td = socket_monitor.frequency
+        td = link_to 'Show', socket_monitor
+        td = link_to 'Edit', edit_socket_monitor_path(socket_monitor)
+        td = link_to 'Destroy', socket_monitor, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Socket monitor', new_socket_monitor_path

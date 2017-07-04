@@ -1,0 +1,41 @@
+h1 Open sockets
+
+table.table
+  thead
+    tr
+      th Socket owner
+      th Code
+      th Url
+      th Address
+      th Gps lat
+      th Gps lng
+      th Voltage
+      th I limit
+      th Price per kwh
+      th In use
+      th Current user
+      th
+      th
+      th
+
+  tbody
+    - @el_sockets.each do |el_socket|
+      tr
+        td = el_socket.user.name
+        td = el_socket.code
+        td = el_socket.url
+        td = el_socket.address
+        td = el_socket.gps_lat
+        td = el_socket.gps_lng
+        td = el_socket.voltage
+        td = el_socket.i_limit
+        td = el_socket.price_per_kWh
+        td = el_socket.in_use
+        td = el_socket.current_user
+        td = link_to 'Show', el_socket
+        td = link_to 'Edit', edit_el_socket_path(el_socket)
+        td = link_to 'Destroy', el_socket, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New El socket', new_el_socket_path

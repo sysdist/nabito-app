@@ -1,0 +1,24 @@
+p#notice = notice
+
+p
+  strong El socket:
+  = @socket_monitor.el_socket
+p
+  strong Current sensor:
+  = @socket_monitor.current_sensor_id
+p
+  strong Voltage sensor:
+  = @socket_monitor.voltage_sensor_id
+p
+  strong Nominal voltage:
+  = @socket_monitor.nominal_voltage
+p
+  strong Active:
+  = @socket_monitor.active
+p
+  strong Frequency:
+  = @socket_monitor.frequency
+
+= link_to 'Edit', edit_socket_monitor_path(@socket_monitor)
+'  |
+= link_to 'Back', socket_monitors_path

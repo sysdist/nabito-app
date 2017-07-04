@@ -1,0 +1,20 @@
+
+.row
+  .col-md-6
+    h3 Socket configuration
+    .col-md-6
+      = link_to image_tag("http://placehold.it/200x100"), edit_el_socket_path(ElSocket.first)
+    .col-md-6
+      ul
+        li = link_to t('.socket_config'), edit_el_socket_path(ElSocket.first)
+        li= link_to t('.monitors'), socket_monitors_path
+        li= link_to t('.relays'), relays_path
+        li= link_to t('.energy_use'), socket_loads_path
+   
+  .col-md-6
+    h3 User management
+    .col-md-6
+      = link_to image_tag("http://placehold.it/200x100"), users_path
+    .col-md-6
+      span = link_to t('.users'), users_path
+  

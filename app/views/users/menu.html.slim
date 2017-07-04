@@ -1,0 +1,40 @@
+h1 Menu
+
+- if current_user.is_admin
+    == render 'users/admin_menu'
+
+.row
+  .col-md-6
+    h3 Socket
+    .col-md-6
+      = link_to image_tag("http://placehold.it/200x100"), el_socket_path(ElSocket.first)
+    .col-md-6
+      p = link_to t('.socket'), el_socket_path(ElSocket.first) 
+  .col-md-6
+    h3 Bills
+    .col-md-6
+      = link_to image_tag("http://placehold.it/200x100"), socket_usages_path
+    .col-md-6
+      span = link_to t('.billing'), socket_usages_path
+.clearfix
+  br
+  br
+.row
+  .col-md-6
+    h3 Graphs and details
+    .col-md-6
+      = link_to image_tag("http://placehold.it/200x100"), socket_loads_path
+    .col-md-6
+      span = link_to t('.energy_use'), socket_loads_path
+  .col-md-6
+    h3 My account
+    .col-md-6
+      = link_to image_tag("http://placehold.it/200x100"), edit_user_registration_path
+    .col-md-6
+      span = link_to t('.edit_account'), edit_user_registration_path
+
+.row
+  br
+  br
+  br
+  

@@ -1,0 +1,27 @@
+= form_for @socket_monitor do |f|
+  - if @socket_monitor.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@socket_monitor.errors.count, "error")} prohibited this socket_monitor from being saved:"
+      ul
+        - @socket_monitor.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :el_socket_id
+    = f.text_field :el_socket_id
+  .field
+    = f.label :current_sensor_id
+    = f.number_field :current_sensor_id
+  .field
+    = f.label :voltage_sensor_id
+    = f.number_field :voltage_sensor_id
+  .field
+    = f.label :nominal_voltage
+    = f.number_field :nominal_voltage
+  .field
+    = f.label :active
+    = f.check_box :active
+  .field
+    = f.label :frequency
+    = f.number_field :frequency
+  .actions = f.submit

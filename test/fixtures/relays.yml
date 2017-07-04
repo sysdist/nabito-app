@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  el_socket: one
+  name: MyString
+  pin_num: 1
+  pin_id: MyString
+  is_on: false
+
+two:
+  el_socket: two
+  name: MyString
+  pin_num: 1
+  pin_id: MyString
+  is_on: false
