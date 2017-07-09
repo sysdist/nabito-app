@@ -1,14 +1,15 @@
-Nabito
-================
+# Nabito
 
-Nabito-app is a Ruby on Rails app that is a web GUI for a smart electricity meter with authorization, billing capabilities and user management. 
-The smart meter is basically a control box with easy to get parts and is designed to be an intelligent and yet inexpensive electric socket solution for public and private parking lots for slow charging of electric vehicles.
+Nabito-app is a Ruby on Rails applications that provides a web GUI for a standalone Nabito control box.
+
+Nabito control box is essentially a smart electricity meter with authorization, billing capabilities and user management,
+currently it's in very early stage but some core functionalities are already in place. 
+The control box consists of easy-to-get parts and is designed to be an intelligent and yet inexpensive electric socket solution for public and private parking lots for slow charging of electric vehicles.
 It runs on OrangePi One single-board computer (SCB). 
-A build guide will be provided soon for this control box.  
+A build guide for the control box will be provided soon.  
 
 
-Ruby on Rails
--------------
+## Ruby on Rails
 
 This application requires:
 
@@ -16,40 +17,35 @@ This application requires:
 - Rails 5.0.2
 - Postgres DB
 
-Getting Started
----------------
+## Getting Started
+
 We assume you know how a Rails application works and already have ruby, gems, rails and postgres environment set up.
 To install the app you first clone this and then in the app directory: 
 
 	$ bundle install  #install the necessary gems 
 	$ rake db:setup   #create the DB schema and seed master data
-	$ rails server
+	$ rails server    #to start the app
 
 Admin login: admin@example.com
 Password: changeme
 
 to be continued..
 
-Documentation and Support
--------------------------
+## Features
+
 coming soon
 
-Issues
--------------
+## Issues
 coming soon
 
-Similar Projects
-----------------
+## Wishlist
+
+## Related Projects
 coming soon
 
-Contributing
-------------
+## Contributing
 coming soon
 
-Credits
--------
-coming soon
-
-License
+# License
 -------
 coming soon
