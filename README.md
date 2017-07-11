@@ -46,6 +46,7 @@ coming soon
 ## Contributing
 coming soon
 
-# License
+## License
 -------
-coming soon
+This software is licensed under the MIT license. See the [LICENSE](LICENSE.md) file for license rights and limitations.
+
