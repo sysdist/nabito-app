@@ -47,6 +47,5 @@ coming soon
 coming soon
 
 ## License
--------
 This software is licensed under the MIT license. See the [LICENSE](LICENSE.md) file for license rights and limitations.
 
